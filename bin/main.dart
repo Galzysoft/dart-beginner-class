@@ -42,6 +42,8 @@ print(expss.expSwitch2(gender: "gender"));
   expss.expDoWhileLoop();
   print("----------------arrayManipulation---------------------");
   expss.arrayManipulation();
+  print("----------------arrayManipulationForeach---------------------");
+  expss.arrayManipulationForEach();
 }
 
 void printname() {

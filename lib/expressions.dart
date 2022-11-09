@@ -53,7 +53,6 @@ class Expressions {
   void expForLoop() {
     for (int i = 1; i <= 10; i++) {
       print(i);
-
     }
   }
 
@@ -73,14 +72,58 @@ class Expressions {
     } while (i <= 10);
   }
 
+  void arrayManipulation() {
+    String ada = "obi";
 
-  void arrayManipulation(){
-    List<int>azu=[12,3,4,45,34,5,5,5];
-    for(int i=0;i<azu.length;i++){
-    print (azu[i]);
+    List<dynamic> azu = [
+      [1, 2, 4, 5],
+      1.2,
+      3,
+      4.0,
+      [1, 2, 4],
+      45,
+      ["ggg", 2.0, "uu"],
+      5,
+      5,
+      "maggi",
+      [1, 2, 4, 5]
+    ];
 
+    for (int i = 0; i < azu.length; i++) {
+      String type = azu[i].runtimeType.toString();
+      if (type.contains("List")) {
+        for (int j = 0; j < azu[i].length; j++) {
+          print(azu[i][j]);
+        }
+      } else {
+        print(azu[i]);
+      }
     }
-
   }
 
+  void arrayManipulationForEach() {
+    List<dynamic> azu = [
+      [1, 2, 4, 5],
+      1.2,
+      3,
+      4.0,
+      [1, 2, 4],
+      45,
+      ["ggg", 2.0, "uu"],
+      5,
+      5,
+      "maggi",
+      [1, 2, 4, 5]
+    ];
+
+    azu.forEach((element) {
+      String type = element.runtimeType.toString();
+      if (type.contains('List')) {
+     List b=element;
+     b.forEach((element) { print(element); });
+      } else {
+        print(element);
+      }
+    });
+  }
 }
