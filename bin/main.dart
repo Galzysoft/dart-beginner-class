@@ -1,3 +1,4 @@
+import 'package:otondo/expressions.dart';
 import 'package:otondo/methods.dart';
 
 ///top level variables
@@ -23,8 +24,24 @@ void main() {
   methodsInstanceName1.wor2=12;
  print(methodsInstanceName1.wor2);
   print(methodsInstanceName2.wor2);
+
   methodsInstanceName2.printName("ada maggi",12);
   methodsInstanceName2.NamedParam(name: "adaugo",age: 12,);
+  double ew=methodsInstanceName2.sumProduct(price1: 100, price2: 200.89);
+ print(ew) ;
+
+  Expressions expss=Expressions();
+print(expss.exp1(age: 50));
+print(expss.expSwitch(gender: "male"));
+print(expss.expSwitch2(gender: "gender"));
+  print("-----------------expForLoop--------------------");
+  expss.expForLoop();
+  print("-----------------expWhileLoop--------------------");
+  expss.expWhileLoop();
+  print("-----------------expDoWhileLoop--------------------");
+  expss.expDoWhileLoop();
+  print("----------------arrayManipulation---------------------");
+  expss.arrayManipulation();
 }
 
 void printname() {
