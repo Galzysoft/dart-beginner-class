@@ -115,15 +115,68 @@ class Expressions {
       "maggi",
       [1, 2, 4, 5]
     ];
-
+    azu[1] = "ada";
+    azu..insert(5, "element");
     azu.forEach((element) {
       String type = element.runtimeType.toString();
       if (type.contains('List')) {
-     List b=element;
-     b.forEach((element) { print(element); });
+        List b = element;
+        b.forEach((element) {
+          print(element);
+        });
       } else {
         print(element);
       }
     });
+  }
+
+  void expMap() {
+    List<String> keys = [];
+    Map<String, int> nMap = {'ada': 10, 'obi': 20};
+
+    /// we use this to update our  map
+    nMap["ada"] = 300;
+
+    /// we use this to increase our map items
+    nMap["emma"] = 100;
+    nMap["ff"] = 180;
+    print(keys);
+    print(nMap);
+// nMap.remove("ada");
+    nMap.forEach((key, value) {
+      keys.add(key);
+      print("my key is $key my value is $value");
+    });
+    print(keys);
+  }
+
+  void expSet() {
+
+
+
+    List bb = ["ada", "ada", "obi"];
+    List keyz = [];
+    List values = [];
+    Map<String, int> kkeys = {"ada": 12, "ada": 12, "obi": 12, "obi": 12};
+
+
+
+    List<Map<String, int>> bbMap = [
+      {"ada": 12},
+      {"ada": 12},
+      {"obi": 12},
+      {"obi": 12}
+    ];
+    // Set<Map<String, int>> mySets = {
+    //   {"ada": 12},
+    //   {"ada": 12},
+    //   {"obi": 12},
+    //   {"obi": 12}
+    // };
+
+ values=   kkeys.values.toList().toSet().toList();
+    keyz=   kkeys.keys.toList().toSet().toList();
+       print(keyz);
+
   }
 }

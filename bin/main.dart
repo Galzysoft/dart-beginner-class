@@ -1,5 +1,6 @@
 import 'package:otondo/expressions.dart';
 import 'package:otondo/methods.dart';
+import 'package:otondo/oop.dart';
 
 ///top level variables
 /// and functions are those
@@ -44,6 +45,21 @@ print(expss.expSwitch2(gender: "gender"));
   expss.arrayManipulation();
   print("----------------arrayManipulationForeach---------------------");
   expss.arrayManipulationForEach();
+  print("----------------expMap---------------------");
+  expss.expMap();
+  print("----------------expSet---------------------");
+  expss.expSet();
+  print("----------------OOP---------------------");
+Oop2 oop2=Oop2();
+  print(oop2.getB(zw: 102));
+  print (oop2.getBB);
+oop2.setB(bb: 102);
+oop2.setBB=1900002;
+  print (oop2.getBB);
+print(oop2.getB(zw: 1000));
+int i=0;
+
+
 }
 
 void printname() {
